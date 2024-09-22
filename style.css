@@ -1,0 +1,42 @@
+body{
+    background-color: #000a1f;
+}
+.container{
+    margin: 100px 0 0 200px;
+    width: 70%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.container img{
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 0.684);
+    transition: all ease-in-out 0.5s;
+    cursor: url("cursor.png"),auto;
+}
+.container :hover{
+    width: 25%;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 20px 0 0 10px; /* Further adjust margin */
+        width: 100%; /* Utilize full screen width */
+        height: auto; /* Let height adjust automatically */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+    
+    .container img {
+        width: 60%; /* Larger images on small screens */
+        margin-bottom: 10px; /* Add spacing between images */
+    }
+
+    .container img:hover {
+        width: 70%; /* Adjust hover size for phones */
+    }
+}
